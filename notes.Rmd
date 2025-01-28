@@ -1,0 +1,26 @@
+---
+title: "notes"
+output: html_document
+date: "2025-01-28"
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Week_2
+
+**Hi class!**
+```{r}
+library(tidyverse)
+```
+
+**Plot!**
+
+```{r pressure, echo=FALSE}
+f<-"./data/data-wrangling.csv"
+d<-read_csv(f, col_names = TRUE)
+body <- d$Body_mass_female_mean
+brain <- d$Brain_Size_Species_Mean
+plot(brain, body)
+plot(log(brain), log(body))
+```
